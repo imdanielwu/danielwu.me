@@ -1,0 +1,32 @@
+{{ define "main" }}
+  <article class="pa3 pa4-ns nested-copy-line-height m-width">
+    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
+      {{ .Content }}
+    </section>
+
+    <div id="gallery-box">
+      {{ $isSectionRoot := eq .Section (path.Base .File.Dir) }}
+      {{ if $isSectionRoot }}
+        <aside class="flex-ns flex-wrap justify-around mt5">
+          
+            {{ range (.Paginate (.Pages)).Pages }}
+              <div class="relative w-100 w-30-l mb4 bg-white">
+                {{ .Render "summary" }}
+              </div>
+            {{ end }}
+        
+        </aside>
+      {{ else }}
+        <aside class="gallery-show">
+          {{ .Render "imgs" }}
+        </aside>
+    {{ end }}
+  </div>
+   <div class="tac">
+    {{ template "_internal/pagination.html" . }}
+   </div>
+   <div style="margin-top:20px;">
+    {{- partial "comments.html" . -}}
+   </div>
+  </article>
+{{ end }}

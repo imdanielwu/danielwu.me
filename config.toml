@@ -1,0 +1,62 @@
+baseURL = 'https://danielwu.me/'
+languageCode = 'zh-CN'
+title = 'DanielWu-丹泥耳'
+theme = "ananke"
+favicon = '/favicon.ico'
+DefaultContentLanguage = "zh"
+# SectionPagesMenu = "main"
+Paginate = 9
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+  unsafe = true
+
+[menu]
+[[menu.main]]
+  identifier = 'posts'
+  name = '所有文章'
+  url = '/posts/'
+  weight = 1
+[[menu.main]]
+  identifier = 'gallery'
+  name = '相册'
+  url = '/gallery/'
+  weight = 2
+[[menu.main]]
+  name = '关于我'
+  url = '/about/'
+  weight = 3
+[[menu.main]]
+  name = 'DigCSS'
+  url = 'https://digcss.com'
+  weight = 4
+  [menu.main.params]
+    external = true
+
+[params]
+  date_format = "2006-01-02"
+  mainSections = ['posts']
+  customcss = ["style.css"]
+[[params.ananke_socials]]
+  name = 'weibo'
+  url = 'https://weibo.com/u/7734860176'
+  label = 'Weibo'
+  color = 'red'
+[[params.ananke_socials]]
+  name = 'bilibili'
+  url = 'https://space.bilibili.com/396157233/'
+  label = 'Bilibili'
+  color = 'skyblue'
+[[params.ananke_socials]]
+  name = 'tiktok'
+  url = 'https://www.douyin.com/user/MS4wLjABAAAAxMYEOe27a0z-k01E5bBEjlupty__g2NUhEpc42jAz_wa_j_rv_TK_R8zrYeJoXAg'
+  label = 'Douyin'
+[[params.ananke_socials]]
+  name = 'twitter'
+  url = 'https://twitter.com/imdanielwu'
+  label = 'Twitter'
+[[params.ananke_socials]]
+  name = 'instagram'
+  url = 'https://www.instagram.com/danielwu.me/'
+  label = 'Instagram'

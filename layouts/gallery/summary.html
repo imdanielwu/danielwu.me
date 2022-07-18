@@ -1,0 +1,31 @@
+<div class="mb3 pa4 gallery-covers {{ $.Param "text_color" | default "mid-gray" }} overflow-hidden">
+    <a href="{{ .RelPermalink }}" class="link black dim">
+  
+    <div class="nested-links f5 lh-copy nested-copy-line-height cover-box">
+      {{ range .Params.Covers }}
+        {{/* If we find a Page Resource matching the exact value, we use it instead. */}}
+        {{ with $.Resources.GetMatch . }}
+          {{ $img := . }}
+          {{ $w := .Width }}
+          {{$isSmall := lt $w 500}}
+          {{if $isSmall}}
+            <div class="cover-item" style="background-image:url({{.RelPermalink}});background-size:cover;background-position:center center;"></div>
+            {{ else }}
+            {{ with .Resize "400x" }}
+              <div class="cover-item" style="background-image:url({{.RelPermalink}});background-size:cover;background-position:center center;"></div>
+            {{ end }}
+          {{end}}
+        {{ end }}
+      {{end}}
+    </div>
+    <div class="cover-infos">
+      <h1 class="f3 near-black">
+          {{ .Title }}
+      </h1>
+      <div>
+        <div class="cover-summary">{{ .Summary  }}</div>
+        <div class="cover-desn">{{ .Description }}</div>
+      </div>
+    </div>
+  </a>
+</div>
