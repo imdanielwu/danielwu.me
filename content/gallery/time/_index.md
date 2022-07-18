@@ -10,8 +10,7 @@ imgs: [
     "IMG_2220.JPG",
     "8E1A8443.JPG",
     "IMG_3795.JPG",
-    "IMG_3796.JPG",
-    "us.JPG"
+    "IMG_3796.JPG"
 ]
 description: "Time is ticking out"
 ---
