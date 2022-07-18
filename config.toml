@@ -1,7 +1,7 @@
 baseURL = 'https://danielwu.me/'
 languageCode = 'zh-CN'
 title = 'DanielWu-丹泥耳'
-theme = "ananke"
+theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
 favicon = '/favicon.ico'
 DefaultContentLanguage = "zh"
 # SectionPagesMenu = "main"
