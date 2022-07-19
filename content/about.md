@@ -1,6 +1,6 @@
 ---
 title: "关于我"
-featured_image: 'banner_about.jpg'
+featured_image: 'https://cdn.digcss.com/banner/banner_about.jpg'
 description: "About"
 ---
 

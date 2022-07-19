@@ -26,8 +26,9 @@
     {{ with .Resize "1000x" }}
       {{ $linkToCover = .RelPermalink }}
     {{end}}
+  {{else}}
+    {{ $linkToCover = printf "%s%s" . "?x-oss-process=image/resize,w_1200,m_lfit" }}
   {{ end }}
-{{/* Find the first image with 'cover' in the name in this page bundle. */}}
 {{ else }}
   {{ with .Resources.ByType "image" }}
     {{ with .GetMatch (printf "**{%s}*" $matches) }}

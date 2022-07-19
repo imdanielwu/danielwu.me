@@ -1,41 +1,21 @@
 {{ range .Params.Imgs }}
-    {{ with $.Resources.GetMatch . }}
-        {{ $img := . }}
-        {{ $coverImg := . }}
-        {{ $w := .Width }}
-        {{ $h := .Height }}
-        {{$isVertical := lt (div $w $h) 1}}
-        {{$isSmall := lt $w 500}}
-        {{$isBig := gt $w 1000}}
-        {{if $isVertical}}
-        <div class="relative w-100 bg-white pa4" style="grid-row:span 2">
-        {{else}}
-        <div class="relative w-100 bg-white pa4" style="grid-row:span 1">
-        {{end}}
-        
-                {{/* If we find a Page Resource matching the exact value, we use it instead. */}}
-                
-                    {{if $isBig}}
-                        {{ with $img.Resize "1000x" }}
-                            {{$img = .}}
-                        {{end}}
-                    {{end}}
-                    {{if $isSmall}}
-                        {{$coverImg = .RelPermalink}}
-                    {{else}}
-                        {{ with $img.Resize "400x" }}
-                            {{$coverImg = .RelPermalink}}
-                        {{ end }}
-                    {{end}}
-                    <div class="img-item  oh" style="background-image:url({{$coverImg}});background-size:cover;background-position:center center;">
-                    <a href="{{ $img.RelPermalink }}" 
-                        class="img-target"
-                        data-pswp-width="{{.Width}}" 
-                        data-pswp-height="{{ .Height }}" 
-                        target="_blank"
-                        >
-                        </a>
-                    </div>
-        </div>
+    {{ $imgInfo := getJSON (printf "%s%s" . "?x-oss-process=image/info")}}
+    {{ $w := int $imgInfo.ImageWidth.value }}
+    {{ $h := int $imgInfo.ImageHeight.value }}
+    {{ $isVertical := lt (div $w $h) 1 }}
+    {{if $isVertical}}
+    <div class="relative w-100 bg-white pa4" style="grid-row:span 2">
+    {{else}}
+    <div class="relative w-100 bg-white pa4" style="grid-row:span 1">
     {{end}}
+        <div class="img-item  oh" style="background-image:url({{.}}?x-oss-process=image/resize,w_400,m_lfit);background-size:cover;background-position:center center;">
+            <a href="{{.}}" 
+                class="img-target"
+                data-pswp-width="{{$w}}" 
+                data-pswp-height="{{$h}}" 
+                target="_blank"
+                >
+            </a>
+        </div>
+    </div>
 {{ end }}
