@@ -46,14 +46,10 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}">
   {{- end }}
 
-  {{if .File}}
-    {{$current := (path.Base .File.Dir)}}
-    {{$sectionName := .Section}}
+  {{if and (eq .Section "gallery") (eq .IsPage true) }}
     <!-- 如果是在相册内部，则引用photoswipe css 和 js -->
-    {{if and (ne $current "gallery")  (eq $sectionName "gallery")}}
-      {{ $style := resources.Get "js/ps/photoswipe.css" | resources.Minify | resources.Fingerprint }}
-      <link rel="stylesheet" href="{{ $style.Permalink }}">
-    {{end}}
+    {{ $style := resources.Get "js/ps/photoswipe.css" | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
   {{end}}
   
   </head>
@@ -66,15 +62,8 @@
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
   </body>
 
-  {{if .File}}
-    {{$current := (path.Base .File.Dir)}}
-    {{$sectionName := .Section}}
-    <!-- 如果是在相册内部，则引用photoswipe css 和 js -->
-    {{if and (ne $current "gallery")  (eq $sectionName "gallery")}}
-
-      {{ $psJs := resources.Get "js/ps.js" | js.Build "ps.js" | minify | fingerprint }}
-
-      <script type="module" src="{{$psJs.RelPermalink}}"></script>
-    {{end}}
+  {{if and (eq .Section "gallery") (eq .IsPage true) }}
+    {{ $psJs := resources.Get "js/ps.js" | js.Build "ps.js" | minify | fingerprint }}
+    <script type="module" src="{{$psJs.RelPermalink}}"></script>
   {{end}}
 </html>
