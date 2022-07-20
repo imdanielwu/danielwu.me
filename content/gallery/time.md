@@ -2,6 +2,7 @@
 title: "时光机"
 featured_image: 'https://cdn.digcss.com/gallery/time/1699359ec5a00fa3801aa205f63a2ed8.JPG'
 date: 2022-06-01T13:43:30+08:00
+comment: true
 covers: [
     'https://cdn.digcss.com/gallery/time/1699359ec5a00fa3801aa205f63a2ed8.JPG',
     'https://cdn.digcss.com/gallery/time/me3.jpg',
