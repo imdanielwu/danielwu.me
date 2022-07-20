@@ -1,5 +1,5 @@
 <footer class="global-footer {{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
+  <div class="flex justify-between cross-center">
     <div>
       <a href="{{ .Site.BaseURL }}" >
         &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}.

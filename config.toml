@@ -49,10 +49,6 @@ Paginate = 9
   label = 'Bilibili'
   color = 'skyblue'
 [[params.ananke_socials]]
-  name = 'tiktok'
-  url = 'https://www.douyin.com/user/MS4wLjABAAAAxMYEOe27a0z-k01E5bBEjlupty__g2NUhEpc42jAz_wa_j_rv_TK_R8zrYeJoXAg'
-  label = 'Douyin'
-[[params.ananke_socials]]
   name = 'twitter'
   url = 'https://twitter.com/imdanielwu'
   label = 'Twitter'
