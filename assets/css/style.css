@@ -141,6 +141,9 @@
     text-decoration: none;
 }
 
+.footer-l>div{
+    margin:4px 0;
+}
 
 .mt4em{
     margin-top: 4em;

@@ -1,14 +1,20 @@
 <footer class="global-footer {{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between cross-center">
-    <div>
-      <a href="{{ .Site.BaseURL }}" >
-        &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}.
-      </a>
-      <span>
-        Powered By <a href="https://gohugo.io/" target="_blank">Hugo</a>.
-      </span>
+    <div class="footer-l">
+      <div>
+        <a href="https://github.com/theNewDynamic/gohugo-theme-ananke" target="_blank">Theme : Ananke</a>
+      </div>
+      <div>
+        <a href="https://gohugo.io/" target="_blank">Powered By Hugo</a>
+      </div>
+      <div>
+        <a href="{{ .Site.BaseURL }}" >
+          &copy; {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ now.Format "2006"}} {{ end }}
+        </a>
+      </div>
+      
     </div>
     
-    <div>{{ partial "social-follow.html" . }}</div>
+    <div class="fx-row fx-cross-center">{{ partial "social-follow.html" . }}</div>
   </div>
 </footer>
