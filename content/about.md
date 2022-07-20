@@ -7,7 +7,7 @@ description: "About"
 <div class="fx-row">
 <div class="about-img">
 
-![我](https://cdn.digcss.com/gallery/time/me3.jpg)
+[![我](https://cdn.digcss.com/gallery/time/me3.jpg)](/gallery/time)
 
 </div>
 <div class="fx-stretch">
@@ -19,8 +19,9 @@ description: "About"
 - 职业：不专业程序员 <a href="#footnote4"><sup>④</sup></a>
 - 性格：内向，甚至可以说是孤僻 <a href="#footnote5"><sup>⑤</sup></a>
 - 爱好：打篮球、看漫画、看小说、耍双节棍、画画、学习…… <a href="#footnote6"><sup>⑥</sup></a>
-- 最喜欢吃的：馒头、香蕉、小龙虾！
-- 最喜欢喝的：金桔柠檬茶(正常糖)
+- 最喜欢吃的：馒头、香蕉、小龙虾<a href="#footnote7"><sup>⑦</sup></a>
+- 最喜欢喝的：金桔柠檬茶(正常糖) <a href="#footnote8"><sup>⑧</sup></a>
 
 </div>
 </div>
+
