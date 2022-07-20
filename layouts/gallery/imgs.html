@@ -1,7 +1,18 @@
 {{ range .Params.Imgs }}
     {{ $imgInfo := getJSON (printf "%s%s" . "?x-oss-process=image/info")}}
-    {{ $w := int $imgInfo.ImageWidth.value }}
-    {{ $h := int $imgInfo.ImageHeight.value }}
+    {{ $oWidth := int $imgInfo.ImageWidth.value }}
+    {{ $oHeight := int $imgInfo.ImageHeight.value }}
+    {{ $max := 1500 }}
+
+    {{ $w := $oWidth }}
+    {{ $h := $oHeight }}
+
+    <!-- 如果原始宽度大于 $max，则需要控制大小 -->
+    {{if gt $oWidth $max}}
+        {{$w = $max}}
+        {{$h = div $oHeight (div $oWidth $max)}}
+    {{end}}
+   
     {{ $isVertical := lt (div $w $h) 1 }}
     {{if $isVertical}}
     <div class="relative w-100 bg-white pa4" style="grid-row:span 2">
@@ -9,7 +20,7 @@
     <div class="relative w-100 bg-white pa4" style="grid-row:span 1">
     {{end}}
         <div class="img-item  oh" style="background-image:url({{.}}?x-oss-process=image/resize,w_400,m_lfit);background-size:cover;background-position:center center;">
-            <a href="{{.}}" 
+            <a href="{{.}}?x-oss-process=image/resize,w_{{$max}},m_lfit" 
                 class="img-target"
                 data-pswp-width="{{$w}}" 
                 data-pswp-height="{{$h}}" 
