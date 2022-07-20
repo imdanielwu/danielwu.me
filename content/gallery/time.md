@@ -17,7 +17,6 @@ imgs: [
     'https://cdn.digcss.com/gallery/time/7729e74ea0caa44eb93a47109a5f3e44.JPG',
     'https://cdn.digcss.com/gallery/time/cae68d4c245e0f3fc08e882c9f913ab9.JPG',
     'https://cdn.digcss.com/gallery/time/e86bc31535524e7792c149e32d3a63cf.JPG',
-    'https://cdn.digcss.com/gallery/time/me2.jpg',
     'https://cdn.digcss.com/gallery/time/me3.jpg',
     'https://cdn.digcss.com/gallery/time/me4.JPG'
 ]
