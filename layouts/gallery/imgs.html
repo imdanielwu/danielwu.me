@@ -10,7 +10,7 @@
     <!-- 如果原始宽度大于 $max，则需要控制大小 -->
     {{if gt $oWidth $max}}
         {{$w = $max}}
-        {{$h = div $oHeight (div $oWidth $max)}}
+        {{$h = div (mul $max $oHeight) $oWidth}}
     {{end}}
    
     {{ $isVertical := lt (div $w $h) 1 }}
