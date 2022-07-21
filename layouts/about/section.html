@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <article class="pa3 pa4-ns nested-copy-line-height">
+    <div class="m-width">
+        <div class="bg-white paper pa4 mt4em nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} pr4-l">
+            <div class="tac">
+                <a href="/gallery/time" class="about-img cursor" style="background:url({{.Params.avatar}}?x-oss-process=image/resize,w_300,m_lfit) no-repeat center center;background-size: cover;">
+                </a>
+            </div>
+            <div class="basic-info mt4">
+                {{ range .Params.basic_info }}
+                <div class="fx-row">
+                    <div class="fx-stretch tar info-l">
+                        {{.field}}：
+                    </div>
+                    <div class="fx-stretch info-r">
+                        {{.value}}
+                        {{if .note}}
+                            <sup><a href="#note{{.note}}" class="sup">{{.note}}</a></sup>
+                        {{end}}
+                    </div>
+                </div>
+                {{end}}
+            </div>
+            <div class="detail-info">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+   <div style="margin-top:20px;">
+        {{- partial "comments.html" . -}}
+   </div>
+  </article>
+{{ end }}
