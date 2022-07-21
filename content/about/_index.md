@@ -22,7 +22,7 @@ basic_info: [
 
 - <span class="sup" id="foot-note2">[3](#note3)</span>  \\^_^/ &nbsp; ![Wedding](https://cdn.digcss.com/gallery/time/7729e74ea0caa44eb93a47109a5f3e44.JPG?x-oss-process=image/resize,w_500,m_lfit)
 
-- <span class="sup" id="foot-note2">[2](#note2)</span> 我上大专时的专业是「计算机应用-智能电子产品设计」。学的东西都是我不喜欢的，比如：单片机、电路板……
+- <span class="sup" id="foot-note2">[2](#note2)</span> 我在大专时期的专业是「计算机应用-智能电子产品设计」。学的东西都是我不喜欢的，比如：单片机、电路板……业余时间折腾网站。因为学一点HTML、CSS之后再会套CMS模板一个网站就出来了（那个时候甚至连JS都不怎么会写），所以觉得很有成就感。后来在学校去北京比赛网页设计开发得了个特等奖(奖品是个ipad一代，当时是我最贵最先进的物品，不过玩了一段时间之后被我卖掉换生活费了)。所以毕业自然就做了这方面的工作。我是开始投简历才知道有一种职业叫「前端开发」，我自然就是一个「前端开发工种师」了。工作之后才发现自己是多么的无知和渺小。你会不会的，别人都会。
 
 
 
