@@ -186,7 +186,10 @@ body,html{
 }
 
 @media (max-width:768px) {
-    .basic-info{
+    sup,.sup{
+        transform: scale(0.7);
+    }
+    .basic-info,.detail-info{
         font-size: 14px;
     }
     .info-r{
@@ -242,9 +245,15 @@ sup,.sup{
     margin:0;
 }
 .detail-info li .sup{
-    transform: translateY(45%);
     margin-right: 0.4em;
     position: absolute;
     right:100%;
-    top:0;
+    top:8px;
+}
+
+
+@media (max-width:768px) {
+    .detail-info li .sup{
+        top:3px;
+    }
 }
