@@ -1,3 +1,6 @@
+body,html{
+    scroll-behavior: smooth;
+}
 .global-footer,.global-footer a{
     color:white;
 }
@@ -195,7 +198,7 @@
     transition: 0.3s;
 }
 
-sup>a{
+sup>a,.sup>a{
     text-decoration: none;
     transition: 0.3s;
     display:inline-block;
@@ -204,19 +207,22 @@ sup>a{
     color:black !important;
 }
 
-sup:hover{
+sup:hover,.sup:hover{
     opacity:0.5;
     transform: scale(1.1);
 }
 
 
-sup{
+sup,.sup{
     transition: 0.3s;
     display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     width:16px;
+    min-width:16px;
     height:16px;
     line-height: 14px;
+
+    font-size: 14px;
     text-align: center;
     box-sizing: border-box;
     border:1px solid black;
@@ -226,4 +232,16 @@ sup{
 
 .paper{
     box-shadow:0 0 5px rgba(0,0,0,0.2), 10px 10px 0 rgb(158, 158, 158),20px 20px 0 rgb(205, 205, 205);
+}
+.detail-info li{
+    list-style: none;
+}
+
+.detail-info li p .sup{
+    transform: translateY(45%);
+    margin-right: 0.4em;
+}
+.detail-info li p{
+    display: flex;
+    align-items: start;
 }
