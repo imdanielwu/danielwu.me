@@ -235,13 +235,16 @@ sup,.sup{
 }
 .detail-info li{
     list-style: none;
-}
-
-.detail-info li p .sup{
-    transform: translateY(45%);
-    margin-right: 0.4em;
+    position:relative;
+    margin:1em 0;
 }
 .detail-info li p{
-    display: flex;
-    align-items: start;
+    margin:0;
+}
+.detail-info li .sup{
+    transform: translateY(45%);
+    margin-right: 0.4em;
+    position: absolute;
+    right:100%;
+    top:0;
 }
