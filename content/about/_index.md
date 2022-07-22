@@ -1,8 +1,8 @@
 ---
-title: "关于"
+title: "关于丹泥耳"
 featured_image: 'https://cdn.digcss.com/banner/banner_about.jpg'
 comment: true
-description: "About"
+description: "About Daniel Wu"
 avatar: 'https://cdn.digcss.com/gallery/time/me1.jpg'
 basic_info: [
     {"field":'姓名',"value":'吴静伟',"note":1},
