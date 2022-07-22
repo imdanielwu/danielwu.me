@@ -2,7 +2,7 @@
 title: "杞人忧天"
 date: 2019-07-31T13:43:30+08:00
 draft: false,
-categories: ['陈芝麻烂谷子']
+categories: ['胡思乱想']
 comment: true
 ---
 
