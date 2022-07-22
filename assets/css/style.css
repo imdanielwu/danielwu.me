@@ -289,19 +289,27 @@ sup,.sup{
 
 .posts-section dd a{
     text-decoration: none;
+    color: gray;
+    padding:10px 0;
 }
 
+.posts-section dd a:hover .split-line::after{
+    border-top-color:#357edd;
+    border-top-style: solid;
+}
 .split-line{
     position:relative;
     overflow: hidden;
+    
 }
 
 .split-line::after{
     content: '';
     display: block;
-    border-top:1px dashed #357edd;
+    border-top:1px dashed gray;
     position: absolute;
     margin-top: 1px;
+    transition: 0.3s;
     top:50%;
     width:100%;
 }
