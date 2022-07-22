@@ -3,9 +3,9 @@
     <div class="m-width">
         <div class="mt4em nested-copy-line-height lh-copy {{ $.Param "post_content_classes"  | default "serif"}} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} pr4-l">
             {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.categories }}
-            <div class="bg-white paper mt4">
+            <div class="bg-white mt4 article-block">
                 <dl>
-                    <dt><a href="{{.Page.RelPermalink}}">{{ $taxonomyname }}</a></dt>
+                    <dt><a href="{{.Page.RelPermalink}}">{{ $taxonomyname }}:</a></dt>
                     <dd class="pa4">
                         {{range $taxonomy.Pages}}
                          <a class="fx-row" href="{{.RelPermalink}}">
