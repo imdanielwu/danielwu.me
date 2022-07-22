@@ -296,6 +296,7 @@ sup,.sup{
 .posts-section dd a:hover .split-line::after{
     border-top-color:#357edd;
     border-top-style: solid;
+    opacity:0.4;
 }
 .split-line{
     position:relative;
