@@ -2,6 +2,7 @@
 title: "我曾经是个贼"
 date: 2019-08-01T14:25:34+08:00
 draft: false,
+categories: ['陈芝麻烂谷子']
 comment: true
 ---
 

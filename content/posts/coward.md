@@ -2,6 +2,7 @@
 title: "胆小鬼被劫"
 date: 2019-09-02T13:43:30+08:00
 draft: false,
+categories: ['陈芝麻烂谷子']
 comment: true,
 ---
 「回去好好写作业，明天我要检查的，下课！」
